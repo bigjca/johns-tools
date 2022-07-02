@@ -1,6 +1,16 @@
 <div class="game-info" *ngIf="gameInfo">
   <div class="game-info-header">{{gameInfo.name}}</div>
-  <img src="http://howlongtobeat.com{{gameInfo.imageUrl}}">
+  <img src="http://howlongtobeat.com{{gameInfo.imageUrl}}" (click)="onImageClick()">
+  <div class="price-info-shell" *ngIf="viewingPrice" (click)="viewingPrice = false">
+    <div class="price-info">
+      <div class="price-info-title">Deals for {{gameInfo.name}}:</div>
+      <ng-container *ngFor="let info of priceInfo">
+        <div>
+          {{info.shop?.name}} - <a (click)="$event.stopPropagation()" href="{{info.url}}" target="_blank">{{info.price_new | currency}}</a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
   <div class="game-info-footer">{{gameInfo.gameplayMain}} hours</div>
 </div>
 

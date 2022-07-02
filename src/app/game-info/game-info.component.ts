@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {GameInfo} from "../models/game-info";
 import {HowLongToBeatEntry} from "howlongtobeat";
+import {HttpClient} from "@angular/common/http";
+import {PriceInfo} from "../models/price-info";
 
 @Component({
   selector: 'app-game-info',
@@ -9,10 +10,21 @@ import {HowLongToBeatEntry} from "howlongtobeat";
 })
 export class GameInfoComponent implements OnInit {
 
-  @Input() gameInfo?: HowLongToBeatEntry;
-  constructor() { }
+  @Input() gameInfo: HowLongToBeatEntry = {} as HowLongToBeatEntry;
+  viewingPrice = false;
+  priceInfo: PriceInfo[] = [];
+  constructor(private readonly httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  onImageClick(): void {
+    this.viewingPrice = true;
+    const params = {title: this.gameInfo.name};
+    if(this.priceInfo.length === 0) {
+      this.httpClient.get<PriceInfo[]>('/.netlify/functions/price', {params}).subscribe(res => {
+        this.priceInfo = res;
+      });
+    }
+  }
 }
