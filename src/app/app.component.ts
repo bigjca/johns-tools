@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'johns-tools';
+  results: any = {};
+  constructor() {}
+
+  onSearchClick(text: string): void {
+    console.log(text);
+  }
+
+
 }
