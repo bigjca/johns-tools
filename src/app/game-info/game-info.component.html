@@ -1,4 +1,4 @@
-<div class="game-info">
+<div class="game-info" *ngIf="gameInfo">
   <div class="game-info-header">{{gameInfo.name}}</div>
   <img src="http://howlongtobeat.com{{gameInfo.imageUrl}}">
   <div class="game-info-footer">{{gameInfo.gameplayMain}} hours</div>

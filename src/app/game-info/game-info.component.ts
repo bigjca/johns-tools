@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {GameInfo} from "../models/game-info";
+import {HowLongToBeatEntry} from "howlongtobeat";
 
 @Component({
   selector: 'app-game-info',
@@ -8,7 +9,7 @@ import {GameInfo} from "../models/game-info";
 })
 export class GameInfoComponent implements OnInit {
 
-  @Input() gameInfo: GameInfo = {};
+  @Input() gameInfo?: HowLongToBeatEntry;
   constructor() { }
 
   ngOnInit(): void {
