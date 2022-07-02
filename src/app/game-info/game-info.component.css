@@ -1,0 +1,27 @@
+.game-info {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info > img {
+ width: 100%;
+}
+
+.game-info-header, .game-info-footer {
+  font-size: 1.5rem;
+  background-color: #151a1e;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.game-info-header {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.game-info-footer {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}

@@ -1,8 +1,15 @@
 <h1>John's Tools</h1>
 
-<input type="text" #text>
-<button (click)="onSearchClick(text.value)">Search</button>
+<div class="search">
+  <label>Search For Game: </label>
+  <input type="text" #text>
+  <button class="search-button" (click)="onSearchClick(text.value)">Search</button>
+</div>
 
-<pre>
-  {{results | json}}
-</pre>
+<div class="game-info-list">
+  <ng-container *ngFor="let game of results">
+    <app-game-info [gameInfo]="game"></app-game-info>
+  </ng-container>
+</div>
+
+
