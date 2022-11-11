@@ -1,6 +1,6 @@
 <div class="game-info" *ngIf="gameInfo">
   <div class="game-info-header">{{gameInfo.name}}</div>
-  <img src="http://howlongtobeat.com{{gameInfo.imageUrl}}" (click)="onImageClick()">
+  <img src="{{gameInfo.imageUrl}}" (click)="onImageClick()">
   <div class="price-info-shell" *ngIf="viewingPrice" (click)="viewingPrice = false">
     <div class="price-info">
       <div class="price-info-title">Deals for {{gameInfo.name}}:</div>
