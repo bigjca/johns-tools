@@ -13,7 +13,6 @@ export class AppComponent {
   constructor(private httpClient: HttpClient) {}
 
   onSearchClick(text: string): void {
-    console.log(text);
     this.httpClient.get<GameInfo[]>('/.netlify/functions/howlong', {params: {q: text}}).subscribe(res => {
       this.results = res;
     });

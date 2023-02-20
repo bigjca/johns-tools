@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {HowLongToBeatEntry} from "howlongtobeat";
 import {HttpClient} from "@angular/common/http";
-import {PriceInfo} from "../models/price-info";
+import {PriceInfo} from "../../models/price-info";
 
 @Component({
   selector: 'app-game-info',

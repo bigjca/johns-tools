@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {HttpClientModule} from "@angular/common/http";
-import { GameInfoComponent } from './game-info/game-info.component';
+import {AppRoutingModule} from "./app.routing.module";
+import {OpenaiImageGenModule} from "./openai-image-gen/openai-image-gen.module";
+import {GameSearchModule} from "./game-search/game-search.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameInfoComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule,
+    GameSearchModule,
+    OpenaiImageGenModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

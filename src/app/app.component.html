@@ -1,15 +1,6 @@
 <h1>John's Tools</h1>
-
-<div class="search">
-  <label>Search For Game: </label>
-  <input type="text" #text>
-  <button class="search-button" (click)="onSearchClick(text.value)">Search</button>
-</div>
-
-<div class="game-info-list">
-  <ng-container *ngFor="let game of results">
-    <app-game-info [gameInfo]="game"></app-game-info>
-  </ng-container>
-</div>
-
-
+<nav>
+  <a routerLink="game-search" routerLinkActive="active">Game Search</a>
+  <a routerLink="openai-image" routerLinkActive="active">Open Ai Image Generation</a>
+</nav>
+<router-outlet></router-outlet>
