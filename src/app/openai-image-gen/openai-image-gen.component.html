@@ -1,1 +1,17 @@
-<p>openai-image-gen works!</p>
+<div class="search">
+  <label>Enter prompt, number, & size: </label>
+  <form (ngSubmit)="onGenerateClick(prompt.value, number.value, size.value)">
+    <input type="text" #prompt>
+    <select #number>
+      <option *ngFor="let option of numberOptions">{{option}}</option>
+    </select>
+    <select #size>
+      <option *ngFor="let option of sizeOptions">{{option}}</option>
+    </select>
+    <button class="search-button">Generate</button>
+  </form>
+</div>
+
+<ng-container *ngFor="let imageResult of imageResults">
+  <app-openai-image-result [url]="imageResult.url"></app-openai-image-result>
+</ng-container>
