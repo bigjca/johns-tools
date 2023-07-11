@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from "./app.routing.module";
 import {GameSearchModule} from "./game-search/game-search.module";
+import {TromboneChampModule} from "./trombone-champ/trombone-champ.module";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {GameSearchModule} from "./game-search/game-search.module";
     BrowserModule,
     AppRoutingModule,
     GameSearchModule,
+    TromboneChampModule
   ],
   providers: [],
   bootstrap: [AppComponent]
