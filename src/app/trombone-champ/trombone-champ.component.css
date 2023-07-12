@@ -1,0 +1,75 @@
+/*.table-container {*/
+/*  height: calc(100vh - 100px); !* Adjust the header height accordingly *!*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*.table-container table {*/
+/*  flex-grow: 1;*/
+/*  overflow-y: auto;*/
+/*}*/
+
+/*.table-container thead {*/
+/*  position: sticky;*/
+/*  top: 0;*/
+/*}*/
+
+/*table > thead {*/
+/*  background-color: var(--main-bg-color);*/
+/*}*/
+
+/* Table styles */
+.table-container {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  /*background-color: #222;*/
+  /*overflow: hidden;*/
+}
+
+.table-container table {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-bg-color);
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.table-container th {
+  text-align: left;
+}
+
+.table-container tbody tr:nth-child(odd) {
+  background-color: #444;
+}
+
+.table-container tbody tr:hover {
+  /*background-color: #555;*/
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Search bar styles */
+.search-bar {
+  background-color: #444;
+  padding: 10px;
+  display: flex;
+}
+
+input {
+  flex-grow: 1;
+}

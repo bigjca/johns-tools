@@ -1,1 +1,36 @@
-<p>trombone-champ works!</p>
+
+<div class="search-bar">
+  <input type="text">
+</div>
+<div class="table-container">
+  <table>
+    <thead>
+    <!-- Table header rows -->
+    <tr>
+      <th>Song Name</th>
+      <th>Song Artist</th>
+      <th>Creator</th>
+      <th>Length</th>
+      <th>Ranking</th>
+      <th>BPM</th>
+      <th>Genre</th>
+      <th>Download</th>
+      <!-- Add more column headers as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows with data -->
+    <tr *ngFor="let song of tromboneSongs$ | async">
+      <td>{{song.name}}</td>
+      <td>{{song.artist}}</td>
+      <td>{{song.creator}}</td>
+      <td>{{song.length}}</td>
+      <td>{{song.starRanking}}</td>
+      <td>{{song.bpm}}</td>
+      <td>{{song.genre}}</td>
+      <td><a [href]="song.link">Download</a></td>
+      <!-- Add more table cells as needed -->
+    </tr>
+    </tbody>
+  </table>
+</div>
