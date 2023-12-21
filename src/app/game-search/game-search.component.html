@@ -7,7 +7,7 @@
 </div>
 
 <div class="game-info-list">
-  <ng-container *ngFor="let game of results">
+  @for (game of results; track game) {
     <app-game-info [gameInfo]="game"></app-game-info>
-  </ng-container>
+  }
 </div>
