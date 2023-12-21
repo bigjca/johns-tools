@@ -1,3 +1,14 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  label, input, button {
+    font-size: var(--key-font-size);
+  }
+}
+
 .game-info-list {
   display: flex;
   flex-wrap: wrap;

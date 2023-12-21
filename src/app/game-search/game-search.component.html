@@ -1,9 +1,11 @@
-<div class="search">
-  <label>Search For Game: </label>
-  <form (ngSubmit)="onSearchClick(text.value)">
-    <input type="text" #text>
-    <button class="search-button" (click)="onSearchClick(text.value)">Search</button>
-  </form>
+<div class="search-container">
+  <div class="search">
+    <label>Search For Game: </label>
+    <form (ngSubmit)="onSearchClick(text.value)">
+      <input type="text" #text>
+      <button class="search-button" (click)="onSearchClick(text.value)">Search</button>
+    </form>
+  </div>
 </div>
 
 <div class="game-info-list">
