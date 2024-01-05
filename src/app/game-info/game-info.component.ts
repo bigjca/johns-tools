@@ -1,15 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {HowLongToBeatEntry} from "howlongtobeat";
+import {Component, Input} from '@angular/core';
+import {PriceInfo} from "../models/price-info";
 import {HttpClient} from "@angular/common/http";
-import {PriceInfo} from "../../models/price-info";
+import {HowLongToBeatEntry} from "howlongtobeat";
+import {CurrencyPipe} from "@angular/common";
 
 @Component({
   selector: 'app-game-info',
+  standalone: true,
+  imports: [CurrencyPipe],
   templateUrl: './game-info.component.html',
-  styleUrls: ['./game-info.component.css']
+  styleUrl: './game-info.component.css'
 })
-export class GameInfoComponent implements OnInit {
-
+export class GameInfoComponent {
   @Input() gameInfo: HowLongToBeatEntry = {} as HowLongToBeatEntry;
   viewingPrice = false;
   priceInfo: PriceInfo[] = [];

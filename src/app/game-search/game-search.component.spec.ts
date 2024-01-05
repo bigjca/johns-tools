@@ -8,10 +8,10 @@ describe('GameSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameSearchComponent ]
+      imports: [GameSearchComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(GameSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

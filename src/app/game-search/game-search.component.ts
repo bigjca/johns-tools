@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {GameInfoComponent} from "../game-info/game-info.component";
+import {FormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {GameInfo} from "../models/game-info";
 
 @Component({
   selector: 'app-game-search',
+  standalone: true,
+  imports: [FormsModule, HttpClientModule, GameInfoComponent],
   templateUrl: './game-search.component.html',
-  styleUrls: ['./game-search.component.css']
+  styleUrl: './game-search.component.css'
 })
 export class GameSearchComponent {
-
   results: any[] = [];
 
   constructor(private readonly httpClient: HttpClient) {}
