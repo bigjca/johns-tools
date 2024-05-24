@@ -1,9 +1,9 @@
 <div class="search-container">
   <div class="search">
-    <label>Search For Game: </label>
+    <label for="searchInput">Search For Game: </label>
     <form (ngSubmit)="onSearchClick(text.value)">
       <div class="search-inputs">
-        <input type="text" #text contenteditable="true">
+        <input id="searchInput" type="text" #text contenteditable="true">
         <button class="search-button" (click)="onSearchClick(text.value)">Search</button>
       </div>
     </form>

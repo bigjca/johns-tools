@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {PriceInfo} from "../models/price-info";
 import {HttpClient} from "@angular/common/http";
 import {HowLongToBeatEntry} from "howlongtobeat";
@@ -15,10 +15,7 @@ export class GameInfoComponent {
   @Input() gameInfo: HowLongToBeatEntry = {} as HowLongToBeatEntry;
   viewingPrice = false;
   priceInfo: PriceInfo[] = [];
-  constructor(private readonly httpClient: HttpClient) { }
-
-  ngOnInit(): void {
-  }
+  private readonly httpClient = inject(HttpClient);
 
   onImageClick(): void {
     this.viewingPrice = true;
