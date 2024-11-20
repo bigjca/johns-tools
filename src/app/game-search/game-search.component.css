@@ -19,10 +19,16 @@
 .search-inputs {
   display: flex;
   input {
-    width: calc(100% - 100px - 1rem);
-    min-width: 100px;
+    width: calc(100% - 150px - 1rem);
+    min-width: 150px;
+    border-radius: 5px;
   }
   button {
-    width: 100px;
+    width: 150px;
+    background-color: var(--background-color);
+    color: white;
+    cursor: pointer;
+    border-color: white;
+    border-radius: 5px;
   }
 }
