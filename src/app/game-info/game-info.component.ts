@@ -5,11 +5,10 @@ import {HowLongToBeatEntry} from "howlongtobeat";
 import {CurrencyPipe} from "@angular/common";
 
 @Component({
-  selector: 'app-game-info',
-  standalone: true,
-  imports: [CurrencyPipe],
-  templateUrl: './game-info.component.html',
-  styleUrl: './game-info.component.css'
+    selector: 'app-game-info',
+    imports: [CurrencyPipe],
+    templateUrl: './game-info.component.html',
+    styleUrl: './game-info.component.css'
 })
 export class GameInfoComponent {
   @Input() gameInfo: HowLongToBeatEntry = {} as HowLongToBeatEntry;
