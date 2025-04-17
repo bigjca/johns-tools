@@ -14,7 +14,10 @@
         </div>
       </div>
     }
-    <div class="game-info-footer">{{gameInfo.gameplayMain}} hours</div>
+    <div class="game-info-footer">
+      @if (gameInfo.mainTime != null) {
+        {{gameInfo.mainTime / 3600 | number:'1.0-0'}} hours
+      }
+    </div>
   </div>
 }
-

@@ -1,12 +1,12 @@
 import {Component, inject, Input} from '@angular/core';
 import {PriceInfo} from "../models/price-info";
 import {HttpClient} from "@angular/common/http";
-import {HowLongToBeatEntry} from "howlongtobeat";
-import {CurrencyPipe} from "@angular/common";
+import {CurrencyPipe, DecimalPipe} from "@angular/common";
+import {HowLongToBeatEntry} from "howlongtobeat-ts";
 
 @Component({
     selector: 'app-game-info',
-    imports: [CurrencyPipe],
+    imports: [CurrencyPipe, DecimalPipe],
     templateUrl: './game-info.component.html',
     styleUrl: './game-info.component.css'
 })
