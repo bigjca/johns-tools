@@ -4,10 +4,11 @@ import {FormsModule} from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
 import {GameInfo} from "../models/game-info";
 
-@Component({ selector: 'app-game-search',
-    standalone: true,
+@Component({
+    selector: 'app-game-search',
     templateUrl: './game-search.component.html',
-    styleUrl: './game-search.component.css', imports: [FormsModule, GameInfoComponent]})
+    styleUrl: './game-search.component.css', imports: [FormsModule, GameInfoComponent]
+})
 export class GameSearchComponent {
   results: any[] = [];
   private readonly httpClient = inject(HttpClient);
