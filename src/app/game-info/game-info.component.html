@@ -6,10 +6,12 @@
       <div class="price-info-shell" (click)="viewingPrice = false">
         <div class="price-info">
           <div class="price-info-title">Deals for {{gameInfo.name}}:</div>
-          @for (info of priceInfo; track info) {
-            <div>
-              {{info.shop?.name}} - <a (click)="$event.stopPropagation()" href="{{info.url}}" target="_blank">{{info.price_new | currency}}</a>
-            </div>
+          @for (game of priceInfo; track game) {
+            @for (deal of game.deals; track deal) {
+              <div>
+                {{deal.shop.name}} - <a (click)="$event.stopPropagation()" href="{{deal.url}}" target="_blank">{{deal.price.amount | currency}}</a>
+              </div>
+            }
           }
         </div>
       </div>
